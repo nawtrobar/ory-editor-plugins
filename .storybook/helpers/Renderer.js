@@ -23,6 +23,8 @@ import 'ory-editor-plugins-image/lib/index.css'
 import video from 'ory-editor-plugins-video'
 import 'ory-editor-plugins-video/lib/index.css'
 
+import inputChallenge from '@serlo-org/ory-editor-plugins-inputchallenge/src'
+import inputChallengeRender from '@serlo-org/ory-editor-plugins-inputchallenge/src/index.render'
 import spoiler from '@serlo-org/ory-editor-plugins-spoiler/src'
 import '@serlo-org/ory-editor-plugins-spoiler/src/index.css'
 import infobox from '@serlo-org/ory-editor-plugins-infobox/src'
@@ -39,7 +41,16 @@ require('react-tap-event-plugin')() // react-tap-event-plugin is required by mat
 
 // Define which plugins we want to use. We only have slate and parallax available, so load those.
 const editorPlugins = {
-  content: [slate(), spacer, image, video, divider, geogebra, highlight],
+  content: [
+    slate(),
+    spacer,
+    image,
+    video,
+    divider,
+    geogebra,
+    highlight,
+    inputChallenge
+  ],
   layout: [
     infobox({ defaultPlugin: slate() }),
     spoiler({ defaultPlugin: slate() })
@@ -54,7 +65,8 @@ const renderPlugins = {
     video,
     divider,
     geogebraRender,
-    highlightRender
+    highlightRender,
+    inputChallengeRender
   ],
   layout: [
     infoboxRender({ defaultPlugin: slate() }),
