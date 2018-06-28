@@ -11,11 +11,15 @@ class Display extends Component {
 
 	render() {
 		return (
-			<div align="right">
-				<input 
-					type="text"
-					placeholder="Lösung"
-				/>
+			<div class="text-exercise">
+				<form class="input-challenge-group">	
+					<div class="input-challenge-input-wrapper pull-right">
+						<input class="input-challenge-input" 
+							type="text"
+							placeholder="Deine Lösung"
+						/>
+					</div>
+				</form>
 			</div>
 		)
 	}

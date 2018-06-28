@@ -24,6 +24,7 @@ import video from 'ory-editor-plugins-video'
 import 'ory-editor-plugins-video/lib/index.css'
 
 import inputChallenge from '@serlo-org/ory-editor-plugins-inputchallenge/src'
+import '@serlo-org/ory-editor-plugins-inputchallenge/src/index.css'
 import inputChallengeRender from '@serlo-org/ory-editor-plugins-inputchallenge/src/index.render'
 import spoiler from '@serlo-org/ory-editor-plugins-spoiler/src'
 import '@serlo-org/ory-editor-plugins-spoiler/src/index.css'
