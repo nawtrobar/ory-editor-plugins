@@ -17,7 +17,7 @@ storiesOf('inputChallenge', module)
 	.add('Render (w/o user answer)', () => {
 		const content = createStateForContentPlugin({
 			plugin,
-			iniitialState: {
+			initialState: {
 				answer:"yes",
 				solutionType:"expression",
 			}

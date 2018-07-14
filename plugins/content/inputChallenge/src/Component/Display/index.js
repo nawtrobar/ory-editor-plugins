@@ -6,17 +6,23 @@ class Display extends Component {
 	}
 	state = {
 		answer:"",
-		solutionType:""
+		solutionType:"string"
+	}
+
+	getDataType(type){
+		if (type === 'expression') return 'input-expression-equal-match-challenge'
+		else if (type === 'number') return 'input-number-exact-match-challenge'
+		else return 'input-string-normalized-match-challenge'
 	}
 
 	render() {
-		if(this.props.state.solutionType==="string"){
+		const dataType = this.getDataType(this.props.state.solutionType);
 			return (
 				<div class="text-exercise">
 					<form class="input-challenge-group">	
 						<div class="input-challenge-input-wrapper pull-right">
 							<input class="input-challenge-input" 
-								data-type="input-string-equal-match-challenge"
+								data-type={dataType}
 								type="text"
 								placeholder="Deine Lösung"
 							/>
@@ -24,50 +30,7 @@ class Display extends Component {
 				</form>
 		</div>
 			)
-		}
 
-		else if(this.props.state.solutionType==="expression"){
-			return (
-				<div class="text-exercise">
-					<form class="input-challenge-group">	
-						<div class="input-challenge-input-wrapper pull-right">
-							<input class="input-challenge-input" 
-								data-type="input-expression-equal-match-challenge"
-								type="text"
-								placeholder="Deine Lösung"
-							/>
-						</div>
-				</form>
-		</div>
-			)
-		}
-		else if(this.props.state.solutionType==="number"){
-			return (
-				<div class="text-exercise">
-					<form class="input-challenge-group">	
-						<div class="input-challenge-input-wrapper pull-right">
-							<input class="input-challenge-input" 
-								data-type="input-number-equal-match-challenge"
-								type="text"
-								placeholder="Deine Lösung"
-							/>
-						</div>
-				</form>
-		</div>
-			)
-		}
-		else {
-			return (
-				<div class="text-exercise">
-					<form class="input-challenge-group">	
-						<div class="input-challenge-input-wrapper pull-right">
-							MUST SELECT DATATYPE
-							/>
-						</div>
-				</form>
-		</div>
-			)
-		}
 	}
 
 }
