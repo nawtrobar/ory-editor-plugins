@@ -42,9 +42,9 @@ const Form = props => (
 		<br/>
 	</MuiThemeProvider>
 	<h3>Solution Type</h3> 
-	<input type="radio" name="solutiontype" value="string"  onChange={handleType(props.onChange)} /> String <br/>
-	<input type="radio" name="solutiontype" value="number"  onChange={handleType(props.onChange)} /> Number <br/>
-	<input type="radio" name="solutiontype" value="expression"  onChange={handleType(props.onChange)} /> Expression <br/>
+	<input type="radio" name="solutiontype" value="string"  onChange={handleType(props.onChange)} checked={props.state.solutionType === "string"} /> String <br/>
+	<input type="radio" name="solutiontype" value="number"  onChange={handleType(props.onChange)} checked={props.state.solutionType === "number"} /> Number <br/>
+	<input type="radio" name="solutiontype" value="expression"  onChange={handleType(props.onChange)} checked={props.state.solutionType === "expression"} /> Expression <br/>
 	</div>
 )
 
