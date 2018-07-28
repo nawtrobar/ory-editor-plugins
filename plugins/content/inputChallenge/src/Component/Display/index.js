@@ -17,6 +17,7 @@ class Display extends Component {
 
 	render() {
 		const dataType = this.getDataType(this.props.state.solutionType);
+		console.log(this.props.state.solutionType)
 			return (
 				<div class="text-exercise">
 					<form class="input-challenge-group">	
